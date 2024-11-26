@@ -1,0 +1,44 @@
+button {
+  border: solid black 1px;
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  display: flex;
+}
+button:hover {
+  box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+.hidden {
+  display: none;
+}
+.press {
+  animation: press 0.2s ease-in-out;
+}
+.loader {
+  height: 1rem;
+  width: 1rem;
+  border: solid lightblue 3px;
+  border-top: solid blue 3px;
+  border-radius: 100%;
+  margin-left: 1rem;
+}
+.loading {
+  animation: loading 1s linear infinite;
+}
+@keyframes press {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
